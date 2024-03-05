@@ -7,7 +7,7 @@ nlp = spacy.load("en_core_web_md")
 # read data file, clean up data by removing "na" in column "reviews.text"
 dataframe = pd.read_csv("amazon_product_reviews.csv")
 clean_data = dataframe.dropna(subset=["reviews.text"])
-reviews_data = dataframe["reviews.text"]
+reviews_data = clean_data["reviews.text"]
 
 # create a function for predicting sentiment
 def analyze_polarity(text):
